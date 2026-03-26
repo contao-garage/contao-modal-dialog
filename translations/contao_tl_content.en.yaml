@@ -1,0 +1,10 @@
+tl_content:
+    dialog_legend: Modal dialog
+    addModalDialog: [
+        "Add a modal dialog",
+        "Adds a modal dialog and links this content element with it."
+    ]
+    modalDialogText: [
+        "Text for the modal dialog",
+        "Insert a text for the modal dialog and use HTML-Tags for formatting it."
+    ]

@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="contao/languages/en/tl_content.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_content.addModalDialog.0">
+        <source>Add a modal dialog</source>
+        <target>Modalen Dialog hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="tl_content.addModalDialog.1">
+        <source>Adds a modal dialog and links this content element with it.</source>
+        <target>Einen modalen Dialog hinzufügen, mit der das Inhaltselement verlinkt wird.</target>
+      </trans-unit>
+      <trans-unit id="tl_content.modalDialogText.0">
+        <source>Text for the modal dialog</source>
+        <target>Text des modalen Dialogs</target>
+      </trans-unit>
+      <trans-unit id="tl_content.modalDialogText.1">
+        <source>Insert a text for the modal dialog and use HTML-Tags for formatting it.</source>
+        <target>Geben den Text für den modalen Dialog ein und verwenden Sie HTML-Tags, um ihn zu formatieren.</target>
+      </trans-unit>
+      <trans-unit id="tl_content.dialog_legend">
+        <source>Modal dialog</source>
+        <target>Modaler Dialog</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

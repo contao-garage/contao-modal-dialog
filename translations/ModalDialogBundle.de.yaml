@@ -1,0 +1,4 @@
+name: contao-garage/contao-modal-dialog
+message:
+    unsupportedLegacyMode: 
+        Für den Elementtyp "%s" unterstützt die Erweiterung "%s" nicht den Legacy Mode für PHP-Templates und deaktiviert diesen.

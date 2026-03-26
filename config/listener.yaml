@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    contao_garage.modal_dialog.listener.content_load_config:
+        class: ContaoGarage\ModalDialog\EventListener\ContentLoadConfigListener
+        public: true;
+        arguments:
+            - '@request_stack'
+            - '@translator'
+            - '%kernel.project_dir%'
+        tags:
+            - { name: contao.callback, table: tl_content, target: config.onload, method: onLoadConfig }

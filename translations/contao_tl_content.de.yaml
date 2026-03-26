@@ -1,0 +1,10 @@
+tl_content:
+    dialog_legend: Modaler Dialog
+    addModalDialog: [
+        "Modalen Dialog hinzufügen",
+        "Einen modalen Dialog hinzufügen, mit der das Inhaltselement verlinkt wird."
+    ]
+    modalDialogText: [
+        "Text des modalen Dialogs",
+        "Geben den Text für den modalen Dialog ein und verwenden Sie HTML-Tags, um ihn zu formatieren."
+    ]

@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    ContaoGarage\ModalDialog\Controller\ContentElement\TextController:
+        arguments:
+            - '@contao.image.studio'
+        tags:
+            - { name: 'contao.content_element', category: 'texts', type: 'text', template: 'content_element/text', priority: 100 }
+            - { name: 'kernel.event_listener', event: 'kernel.request', method: 'onKernelRequest' }
+

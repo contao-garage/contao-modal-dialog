@@ -1,0 +1,4 @@
+name: contao-garage/contao-modal-dialog
+message:
+    unsupportedLegacyMode: 
+        For element type "%s" the bundle "%s" does not support legacy mode for PHP templates and disables it.

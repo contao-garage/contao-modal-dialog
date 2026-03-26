@@ -1,0 +1,69 @@
+{% extends "@Contao/content_element/text.html.twig" %}
+
+{% set add_modal_dialog, modal_dialog_text = data['addModalDialog'], data['modalDialogText'] %}
+
+{% if element_html_id == false %}
+    {% set element_html_id = 'content-element-' ~ data['id'] %}
+{% endif %}
+
+{% set content_element_id = data['id'] %}
+
+{% block wrapper %}
+    {{ parent() }}
+
+    {% if add_modal_dialog == true %}
+        <template id="template-{{ element_html_id }}">
+            <div @click="displayModal" v-html="node_{{ content_element_id }}" v-bind="attributes_{{ content_element_id }}"></div>
+
+            <div
+                id="modal-dialog-background-{{ element_html_id }}"
+                class="modal-dialog-background-{{ element_html_id }}"
+                @change="closeModal">
+                <div class="modal-dialog-popup-{{ element_html_id }}">
+                    {{ modal_dialog_text|csp_inline_styles|insert_tag_raw|encode_email|raw }}
+                </div>
+            </div>
+        </template>
+    {% endif %}
+{% endblock %}
+
+{% block script %}
+    {% if add_modal_dialog == true %}
+
+<script>
+var element_{{ content_element_id }} = document.querySelector("#{{ element_html_id }}")
+var origin_{{ content_element_id }} = element_{{ content_element_id }}.innerHTML;
+
+
+var app_{{ content_element_id }} = Vue.createApp({
+    delimiters: ['${', '}'],
+    methods: {
+        displayModal() {
+            document.querySelector("#modal-dialog-background-{{ element_html_id }}").style.display = 'flex';
+            window.addEventListener('click', this.setModalInvisible);
+        },
+        setModalInvisible(onClickEvent) {
+            if (onClickEvent.target.id == 'modal-dialog-background-{{ element_html_id }}') {
+                document.querySelector("#modal-dialog-background-{{ element_html_id }}").style.display = 'none';
+                window.removeEventListener('click', this.setModalInvisible);
+            }
+        },
+    },
+
+    data() {
+        return {
+            node_{{ content_element_id }}: origin_{{ content_element_id }},
+            attributes_{{ content_element_id }}: {
+                id: 'modal-dialog-wrapper-{{ content_element_id }}',
+                class: 'modal-dialog-wrapper-{{ content_element_id }}',
+            }
+        }
+    },
+
+    template: '#template-{{ element_html_id }}',
+});
+app_{{ content_element_id }}.mount(element_{{ content_element_id }})
+</script>
+
+    {% endif %}
+{% endblock %}
