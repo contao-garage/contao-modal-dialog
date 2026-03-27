@@ -2,7 +2,7 @@
 
 ## Installation
 
-Adds a modal pop up dialog to content elements, which can be used for comments or explanations.
+Adds a modal pop up dialog to content element of type "text", which can be used for comments or explanations. Does not support but discards legacy mode for PHP templates for content element "text".
 
 ```bash
 composer require contao-garage/contao-modal-dialog
