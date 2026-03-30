@@ -35,5 +35,16 @@
     },
     "extra": {
         "contao-manager-plugin": "ContaoGarage\\ModalDialog\\ContaoManager\\Plugin"
+    },
+    "require-dev": {
+        "contao/easy-coding-standard": "^6.13",
+        "contao/rector": "^1.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
