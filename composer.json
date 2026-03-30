@@ -2,6 +2,11 @@
     "name": "contao-garage/contao-modal-dialog",
     "description": "Adds a modal pop up dialog to content elements.",
     "type": "contao-bundle",
+    "keywords": ["contao bundle", "modal dialog"],
+    "support": {
+        "issues": "https://github.com/contao-garage/contao-modal-dialog/issues",
+        "source": "https://github.com/contao-garage/contao-modal-dialog"
+    },
     "homepage": "https://contao-garage.de",
     "license": "MIT",
     "authors": [
