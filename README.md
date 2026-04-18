@@ -1,3 +1,8 @@
+<p align="center">
+<a href="https://github.com/contao-garage/contao-modal-dialog/actions"><img src="https://github.com/contao-garage/contao-modal-dialog/actions/workflows/ci.yaml/badge.svg" alt></a>
+<a href="https://packagist.org/packages/contao-garage/contao-modal-dialog"><img src="https://img.shields.io/packagist/v/contao-garage/contao-modal-dialog.svg" alt></a>
+</p>
+
 # contao-garage/contao-modal-dialog
 
 ## Installation
